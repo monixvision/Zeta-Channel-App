@@ -37,8 +37,7 @@ const Header = () => {
 
       {/* Mobile & Tablet Header Layout (< md Breakpoint)
       lA IA A USADO EL BREAKPOINT DE LA TABLET PARA EL ORDENADOR */}
-
-      <nav className="bg-white dark:bg-pix-oscuro text-black dark:text-white flex md:hidden items-center justify-between w-full h-[52px] px-3 py-2.5 relative border-b border-grey dark:border-pix-oscuro transition-colors duration-200">
+      <nav className="bg-light dark:bg-dark text-black dark:text-white flex md:hidden items-center justify-between w-full h-[52px] px-3 py-2.5 relative border-b border-grey dark:border-pix-oscuro transition-colors duration-200">
 
         {/* Zeta Mouse Brand Logo */}
         <Link to="/" className="block h-[43px] w-[60px] cursor-pointer">
