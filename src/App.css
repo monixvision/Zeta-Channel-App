@@ -1,0 +1,34 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+:root{
+/* basics */
+--black: #010101;
+--grey: #C8C8C8;
+--white: #F3F3F3;
+/* colores principales */
+--blue: #3467F2;
+--pink: #E6B8E7;
+--green: #61D472;
+/* colores de hover */
+--blue-hover: #6891FF;
+--pink-hover: #FD8BFF;
+--green-hover: #7BF1A8;
+/* color de alerta */
+--red: #DF3232;
+/* colores de pixeles */
+--pix-claro: #C5D2F3;
+--pix-oscuro: #0D1A3B;
+/* colores no de Tailwind */
+
+/* colores modos de visualización */
+--dark: var(--black);
+--light: var(--white);
+
+/* Tipografía*/
+--sans: 'Lexend', sans-serif;
+--pixel: 'Pixelify Sans', sans-serif;
+}
+
