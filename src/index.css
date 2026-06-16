@@ -1,1 +1,19 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-blue: #3467F2;
+  --color-blue-hover: #6891FF;
+  --color-pink: #E6B8E7;
+  --color-pink-hover: #FD8BFF;
+  --color-green: #61D472;
+  --color-green-hover: #7BF1A8;
+  --color-black: #010101;
+  --color-grey: #C8C8C8;
+  --color-white: #F3F3F3;
+  --color-red-alert: #DF3232;
+  --color-pix-claro: #C5D2F3;
+  --color-pix-oscuro: #0D1A3B;
+
+  --font-sans: 'Lexend', sans-serif;
+  --font-pixel: 'Pixelify Sans', sans-serif;
+}
