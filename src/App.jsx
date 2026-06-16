@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './components/Header';
-import Home from '.pages/Home';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+/* import Footer from './components/Footer'; */
 
 const App = () => (
   <>
@@ -9,7 +9,7 @@ const App = () => (
     <main>
       <Home />
     </main>
-    <Footer />
+    {/* <Footer /> */}
   </>
 )
 export default App
