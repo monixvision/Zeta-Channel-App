@@ -1,22 +1,23 @@
 import { Link } from 'react-router-dom';
-/* import { useState, useEffect } from 'react'; */
-import logoLight from '../assets/img/logo-zeta-channel-light.svg';
-/* import logoDark from '../assets/img/logo-zeta-channel-dark.svg'; */
+import { useState, useEffect } from 'react';
+import logoZeta from '../assets/img/logo-zeta-channel.svg';
 import lightbulbIcon from '../assets/img/icon-lightbulb.svg';
 import searchIcon from '../assets/img/icon-search.svg';
 import menuIcon from '../assets/img/icon-menu.svg';
 import ticketIcon from '../assets/img/icon-ticket.svg';
 
 const Header = () => {
-  /* ESTO ES LO QUE EJECUTARIA CUANDO EMPEZASE A APLICAR JAVASCRIPT Y LOS ESTADOS */
-  /* const [language, setLanguage] = useState('ES');
-  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // Sync theme with document class list
+  const [language, setLanguage] = useState('ES');
+  /* por defecto español que es lo que se guarda en lenguage */
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  /* si tenemos dos elemntos a elegir false y true */
+
   useEffect(() => {
     const isDark = document.documentElement.classList.contains('dark');
     setIsDarkMode(isDark);
   }, []);
+  /* si está vacio se ejecuta nada más abrir la página */
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === 'ES' ? 'EN' : 'ES'));
@@ -24,53 +25,59 @@ const Header = () => {
 
   const toggleTheme = () => {
     const newMode = !isDarkMode;
+    /* ! si es true lo cambia a false */
     setIsDarkMode(newMode);
     if (newMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
-  }; */
+  };
 
   return (
     <header className="w-full">
 
-      {/* Mobile & Tablet Header Layout (< md Breakpoint)
-      lA IA A USADO EL BREAKPOINT DE LA TABLET PARA EL ORDENADOR */}
-      <nav className="bg-light dark:bg-dark text-black dark:text-white flex md:hidden items-center justify-between w-full h-[52px] px-3 py-2.5 relative border-b border-grey dark:border-pix-oscuro transition-colors duration-200">
 
-        {/* Zeta Mouse Brand Logo */}
-        <Link to="/" className="block h-[43px] w-[60px] cursor-pointer">
-          <img alt="Zeta Channel Logo" className="size-full" src={logoLight} />
-        </Link>
-        {/* LA / TE LLEVA A LA PAGINA PRINCIPAL */}
+      <nav className="bg-light dark:bg-dark text-black dark:text-white flex items-center w-full justify-between px-3 fixed top-0 left-0 z-9999">
 
+        <div className="pt-2.5">
+          {/* intentar hacer que los ojos sigan el ratón con el cursor */}
+          <Link to="/">
+            <img alt="Zeta Channel Logo" className="w-[60px]" src={logoZeta} />
+          </Link>
+          {/* LA / TE LLEVA A LA PAGINA PRINCIPAL */}
+        </div>
 
-        {/* Mobile Nav Actions */}
-        <div className="flex gap-6 items-center justify-end relative">
-          {/* Custom Language Toggler */}
+        <div className="flex gap-6 items-center">
+          {/* Seleccionador de Idioma */}
           <button
-            /* onClick={toggleLanguage} */
-            className="flex flex-col gap-1 items-start justify-center cursor-pointer font-pixel text-2xl"
+            onClick={toggleLanguage}
+            className="flex flex-col items-center justify-center cursor-pointer font-pixel text-2xl"
           >
-            <span className="text-black dark:text-white">
-              ES/EN
-            </span>
+            <div className="flex gap-1 items-center justify-center">
+              <span className="text-black dark:text-white leading-6">
+                ES
+              </span>
+              <span className="text-black dark:text-white leading-6">
+                /
+              </span>
+              <span className="text-black dark:text-white leading-6">
+                EN
+              </span>
+            </div>
             <div className="flex h-[2px] w-full justify-between">
-              <div className="h-full w-7 transition-colors duration-150" />
-              {/* AQUÍ IRÁ ${language === 'ES' ? 'bg-black dark:bg-white' : 'bg-transparent'}` */}
-              <div className="h-full w-7 transition-colors duration-150 " />
-              {/* AQUÍ IRÁ ${language === 'EN' ? 'bg-black dark:bg-white' : 'bg-transparent'}` */}
+              <div className={`h-full w-7 transition-colors duration-150 ${language === 'ES' ? 'bg-black dark:bg-white' : 'bg-transparent'}`} />
+              <div className={`h-full w-7 transition-colors duration-150 ${language === 'EN' ? 'bg-black dark:bg-white' : 'bg-transparent'}`} />
             </div>
           </button>
 
-          {/* Theme Mode Toggle Button */}
+          {/* Boton que cambia de Modo */}
           <button
-            /* onClick={toggleTheme} */
-            className="flex items-center justify-center p-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
+            onClick={toggleTheme}
+            className=" w-6 h-6 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800"
             aria-label="Toggle theme"
           >
-            <img alt="Lightbulb Icon" className="size-full dark:invert" src={lightbulbIcon} />
+            <img alt="Lightbulb Icon" className="h-6 w-5 dark:invert" src={lightbulbIcon} />
           </button>
 
           {/* Search Button */}
@@ -92,7 +99,7 @@ const Header = () => {
       </nav>
 
       {/* Desktop Header Layout (>= md Breakpoint) */}
-      <nav className="bg-blue dark:bg-pix-oscuro text-white hidden md:flex items-center justify-between w-full h-[96px] px-6 py-2.5 relative transition-colors duration-200">
+      <nav className="bg-blue dark:bg-pix-dark text-white hidden md:flex items-center justify-between w-full h-[96px] px-6 py-2.5 relative transition-colors duration-200">
         {/* Left Side: Desktop Menu & Tickets CTA */}
         <div className="flex gap-8 items-center relative">
           <button

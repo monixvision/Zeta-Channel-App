@@ -1,7 +1,7 @@
 
 const Home = () => {
     return (
-        <div>
+        <div className="pt-[52px]">
             <h1>Home</h1>
             <p>Welcome to the Home page!</p>
         </div>
