@@ -2,7 +2,8 @@
 
 @import 'tailwindcss';
 
-:root {
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
 /* Estos son los colores basicos */
 --color-black: #010101;
 --color-grey: #C8C8C8;
@@ -18,11 +19,11 @@
 /* Este es el color para alertas */
 --color-red-alert: #DF3232;
 /* Estos son los colores para el tema de pixeles */
---color-pix-claro: #C5D2F3;
---color-pix-oscuro: #0D1A3B;
+--color-pix-light: #C5D2F3;
+--color-pix-dark: #0D1A3B;
 /* Estos son los colores para el tema claro y oscuro */
---dark: var(--black);
---light: var(--white);
+--color-dark: var(--black);
+--color-light: var(--white);
 /* Estas son las fuentes */
 --font-sans: 'Lexend', sans-serif;
 --font-pixel: 'Pixelify Sans', sans-serif;
