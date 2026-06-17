@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import logoZeta from '../assets/img/logo-zeta-channel.svg';
 import lightbulbIcon from '../assets/img/icon-lightbulb.svg';
 import searchIcon from '../assets/img/icon-search.svg';
@@ -10,14 +10,11 @@ const Header = () => {
 
   const [language, setLanguage] = useState('ES');
   /* por defecto español que es lo que se guarda en lenguage */
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return typeof document !== 'undefined' ? document.documentElement.classList.contains('dark') : false;
+  });
   /* si tenemos dos elemntos a elegir false y true */
-
-  useEffect(() => {
-    const isDark = document.documentElement.classList.contains('dark');
-    setIsDarkMode(isDark);
-  }, []);
-  /* si está vacio se ejecuta nada más abrir la página */
+  /* esto me lo ha hecho la IA pq me daba error el setIsDarkMode y lo que ha hecho es que si sale que no está definido que por defecto lo ponga en falso -- light (eso es lo que he entendido) */
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === 'ES' ? 'EN' : 'ES'));
