@@ -3,6 +3,7 @@
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
+/* esto lo que hace es rechazar el modo por defecto que tengas en el ordenador para que puedas elegir el que quieras */
 @theme {
 /* Estos son los colores basicos */
 --color-black: #010101;
