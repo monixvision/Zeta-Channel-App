@@ -99,6 +99,8 @@ const Header = () => {
         </div>
       </nav>
 
+      {/* HACER VERSIÓN ORDENADOR */}
+
       <BottomBar />
       <PopupMenu />
 
