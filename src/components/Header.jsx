@@ -10,27 +10,26 @@ const Header = () => {
 
   const [language, setLanguage] = useState('ES');
   /* por defecto español que es lo que se guarda en lenguage */
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return typeof document !== 'undefined' ? document.documentElement.classList.contains('dark') : false;
+  });
+  /* si tenemos dos elemntos a elegir false y true */
+  /* esto me lo ha hecho la IA pq me daba error el setIsDarkMode y lo que ha hecho es que si sale que no está definido que por defecto lo ponga en falso -- light (eso es lo que he entendido) */
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === 'ES' ? 'EN' : 'ES'));
   };
 
-
-  const [esOscuro, setEsOscuro] = useState(() => {
-    return typeof document !== 'undefined' ? document.documentElement.classList.contains('dark') : false;
-  });
-  /* esto me lo ha hecho la IA pq me daba error y lo que ha hecho es buscar si existe la clase dark */
-
-
   const toggleTheme = () => {
-    if (esOscuro) { //Si esta en modo oscuro, cambiamos de oscuro => claro
-      document.documentElement.classList.remove("dark");
-      setEsOscuro(false);
-    } else { //Si no esta en modo oscuro, cambiamos de claro => oscuro
-      document.documentElement.classList.add("dark");
-      setEsOscuro(true);
+    const newMode = !isDarkMode;
+    /* ! si es true lo cambia a false */
+    setIsDarkMode(newMode);
+    if (newMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
     }
-  }
+  };
 
   return (
     <header className="w-full">
