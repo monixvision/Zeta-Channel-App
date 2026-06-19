@@ -13,3 +13,5 @@ const PopupMenu = () => (
     </nav>
 )
 
+export default PopupMenu;
+
