@@ -4,7 +4,7 @@ import logoZeta from '../assets/img/logo-zeta-channel.svg';
 import lightbulbIcon from '../assets/img/icon/icon-lightbulb.svg';
 import searchIcon from '../assets/img/icon/icon-search.svg';
 import menuIcon from '../assets/img/icon/icon-menu.svg';
-import ticketIcon from '../assets/img/icon/icon-ticket.svg';
+/* import ticketIcon from '../assets/img/icon/icon-ticket.svg'; */
 import BottomBar from './BottomBar';
 import PopupMenu from './PopupMenu';
 
