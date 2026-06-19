@@ -10,10 +10,10 @@ import userIcon from '../assets/img/icon/icon-user.svg';
 
 const BottomBar = () => (
     /* hacer que el pop up se pueda mover */
-    <div className="flex flex-col items-center justify-center fixed bottom-0 left-0 w-full bg-pink text-black z-9999">
+    <div className="flex flex-col items-center justify-center fixed bottom-0 left-0 w-full bg-dark dark:bg-blue text-white dark:text-black z-9999">
         <nav>
             <ul>
-                <li><Link to="/"><img src={homeIcon} alt="Home" />HOME</Link></li>
+                <li><Link to="/"><img className="w-6 h-6" src={homeIcon} alt="Home" />HOME</Link></li>
                 <li><Link to="/tickets"><img src={ticketIcon} alt="Tickets" />TICKETS</Link></li>
                 <li><Link to="/cartelera"><img src={carteleraIcon} alt="Cartelera" />CARTELERA</Link></li>
                 <li><Link to="/festival"><img src={festivalIcon} alt="Festival" />FESTIVAL</Link></li>
