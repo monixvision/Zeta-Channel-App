@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import logoZeta from '../assets/img/logo-zeta-channel.svg';
-import lightbulbIcon from '../assets/img/icon-lightbulb.svg';
-import searchIcon from '../assets/img/icon-search.svg';
-import menuIcon from '../assets/img/icon-menu.svg';
-import ticketIcon from '../assets/img/icon-ticket.svg';
+import lightbulbIcon from '../assets/img/icon/icon-lightbulb.svg';
+import searchIcon from '../assets/img/icon/icon-search.svg';
+import menuIcon from '../assets/img/icon/icon-menu.svg';
+import ticketIcon from '../assets/img/icon/icon-ticket.svg';
+import BottomBar from './BottomBar';
+import PopupMenu from './PopupMenu';
 
 const Header = () => {
 
@@ -13,7 +15,7 @@ const Header = () => {
 
   const toggleLanguage = () => {
     setLanguage((prev) => (prev === 'ES' ? 'EN' : 'ES'));
-  };
+  }; /* el prev es el valor anterior del estado */
 
   const [esOscuro, setEsOscuro] = useState(() => {
     return typeof document !== 'undefined' ? document.documentElement.classList.contains('dark') : false;
@@ -63,6 +65,7 @@ const Header = () => {
                 EN
               </span>
             </div>
+
             <div className="flex h-[2px] w-full justify-between">
               <div className={`h-full w-7 transition-colors duration-150 ${language === 'ES' ? 'bg-black dark:bg-white' : 'bg-transparent'}`} />
               <div className={`h-full w-7 transition-colors duration-150 ${language === 'EN' ? 'bg-black dark:bg-white' : 'bg-transparent'}`} />
@@ -78,20 +81,20 @@ const Header = () => {
             <img alt="Lightbulb Icon" className="h-6 w-5 dark:invert" src={lightbulbIcon} />
           </button>
 
-          {/* Search Button */}
+          {/* Boton de Busqueda */}
           <button
-            className="flex items-center justify-center p-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
+            className="w-6 h-6 border-amber-500 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
             aria-label="Search"
           >
-            <img alt="Search Icon" className="size-full dark:invert" src={searchIcon} />
+            <img alt="Search Icon" className="h-6 w-6 dark:invert" src={searchIcon} />
           </button>
 
           {/* Hamburger Menu Button */}
           <button
-            className="flex items-center justify-center p-1 rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
+            className="w-6 h-6 border-amber-500 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
             aria-label="Menu"
           >
-            <img alt="Menu Icon" className="size-full dark:invert" src={menuIcon} />
+            <img alt="Menu Icon" className="h-6 w-6 dark:invert" src={menuIcon} />
           </button>
         </div>
       </nav>
