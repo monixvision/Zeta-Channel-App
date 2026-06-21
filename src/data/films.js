@@ -1,20 +1,20 @@
 /* HIGH SCHOOL MUSICAL */
-import portada1 from '../assets/img/cartelera/HighSchoolMusical/portada.webp';
-import cartel1 from '../assets/img/cartelera/HighSchoolMusical/cartel.webp';
-import troyBolton from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-troy_bolton.webp';
-import gabriellaMontez from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-gabriella_montez.webp';
-import sharpayEvans from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-sharpay_evans.webp';
-import ryanEvans from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-ryan_evans.webp';
-import chadDanforth from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-chad_danforth.webp';
-import taylorMcKessie from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-taylor_mckessie.webp';
-import galeriaHs1 from '../assets/img/cartelera/HighSchoolMusical/galeria-1.webp';
-import galeriaHs2 from '../assets/img/cartelera/HighSchoolMusical/galeria-2.webp';
-import galeriaHs3 from '../assets/img/cartelera/HighSchoolMusical/galeria-3.webp';
-import galeriaHs4 from '../assets/img/cartelera/HighSchoolMusical/galeria-4.webp';
-import galeriaHs5 from '../assets/img/cartelera/HighSchoolMusical/galeria-5.webp';
-import galeriaHs6 from '../assets/img/cartelera/HighSchoolMusical/galeria-6.webp';
-import galeriaHs7 from '../assets/img/cartelera/HighSchoolMusical/galeria-7.webp';
-import galeriaHs8 from '../assets/img/cartelera/HighSchoolMusical/galeria-8.webp';
+import portada1 from '../assets/img/cartelera/high-school-musical/portada.webp';
+import cartel1 from '../assets/img/cartelera/high-school-musical/cartel.webp';
+import troyBolton from '../assets/img/cartelera/high-school-musical/personaje-troy_bolton.webp';
+import gabriellaMontez from '../assets/img/cartelera/high-school-musical/personaje-gabriella_montez.webp';
+import sharpayEvans from '../assets/img/cartelera/high-school-musical/personaje-sharpay_evans.webp';
+import ryanEvans from '../assets/img/cartelera/high-school-musical/personaje-ryan_evans.webp';
+import chadDanforth from '../assets/img/cartelera/high-school-musical/personaje-chad_danforth.webp';
+import taylorMcKessie from '../assets/img/cartelera/high-school-musical/personaje-taylor-mckessie.webp';
+import galeriaHs1 from '../assets/img/cartelera/high-school-musical/galeria-1.webp';
+import galeriaHs2 from '../assets/img/cartelera/high-school-musical/galeria-2.webp';
+import galeriaHs3 from '../assets/img/cartelera/high-school-musical/galeria-3.webp';
+import galeriaHs4 from '../assets/img/cartelera/high-school-musical/galeria-4.webp';
+import galeriaHs5 from '../assets/img/cartelera/high-school-musical/galeria-5.webp';
+import galeriaHs6 from '../assets/img/cartelera/high-school-musical/galeria-6.webp';
+import galeriaHs7 from '../assets/img/cartelera/high-school-musical/galeria-7.webp';
+import galeriaHs8 from '../assets/img/cartelera/high-school-musical/galeria-8.webp';
 
 
 export const CATALOGO_PELIS = [

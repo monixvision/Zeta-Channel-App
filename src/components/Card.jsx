@@ -1,0 +1,1 @@
+import btnMas from '../assets/img/icon/icon-btn-mas.svg';
