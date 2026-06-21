@@ -1,3 +1,21 @@
+/* HIGH SCHOOL MUSICAL */
+import portada1 from '../assets/img/cartelera/HighSchoolMusical/portada.webp';
+import cartel1 from '../assets/img/cartelera/HighSchoolMusical/cartel.webp';
+import troyBolton from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-troy_bolton.webp';
+import gabriellaMontez from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-gabriella_montez.webp';
+import sharpayEvans from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-sharpay_evans.webp';
+import ryanEvans from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-ryan_evans.webp';
+import chadDanforth from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-chad_danforth.webp';
+import taylorMcKessie from '../assets/img/cartelera/HighSchoolMusical/personaje-personaje-taylor_mckessie.webp';
+import galeriaHs1 from '../assets/img/cartelera/HighSchoolMusical/galeria-1.webp';
+import galeriaHs2 from '../assets/img/cartelera/HighSchoolMusical/galeria-2.webp';
+import galeriaHs3 from '../assets/img/cartelera/HighSchoolMusical/galeria-3.webp';
+import galeriaHs4 from '../assets/img/cartelera/HighSchoolMusical/galeria-4.webp';
+import galeriaHs5 from '../assets/img/cartelera/HighSchoolMusical/galeria-5.webp';
+import galeriaHs6 from '../assets/img/cartelera/HighSchoolMusical/galeria-6.webp';
+import galeriaHs7 from '../assets/img/cartelera/HighSchoolMusical/galeria-7.webp';
+import galeriaHs8 from '../assets/img/cartelera/HighSchoolMusical/galeria-8.webp';
+
 
 export const CATALOGO_PELIS = [
     {
@@ -5,14 +23,14 @@ export const CATALOGO_PELIS = [
         id: 1,
         dia: 14,
         tituloEsp: 'High School Musical', // poner , y no ; !!!
-        imagen: '',
+        imagen: portada1,
         tipo: 'Película', // serie, pelicula o actividad
         duracion: 98,
         fecha: 2006,
         horario: ['12:30', '19:30S'], // ponemos un array para el horario, ya que puede haber más de uno
 
         //ARTICULO -- info anterior y esta
-        cartel: '',
+        cartel: cartel1,
         sala: 1,
 
         //INFO DESPLEGABLE
@@ -28,38 +46,38 @@ export const CATALOGO_PELIS = [
         personajes: [ // array de objetos, cada objeto con id, imagen, nombre y personaje
             {
                 id: 1,
-                imagen: '',
+                imagen: troyBolton,
                 actor: 'Zac Efron',
                 personaje: 'Troy Bolton'
             },
             {
                 id: 2,
-                imagen: '',
+                imagen: gabriellaMontez,
                 actor: 'Vanessa Hudgens',
                 personaje: 'Gabriella Montez'
             },
 
             {
                 id: 3,
-                imagen: '',
+                imagen: sharpayEvans,
                 actor: 'Ashley French',
                 personaje: 'Sharpay Evans'
             },
             {
                 id: 4,
-                imagen: '',
+                imagen: ryanEvans,
                 actor: 'Lucas Grabeel',
                 personaje: 'Ryan Evans'
             },
             {
                 id: 5,
-                imagen: '',
+                imagen: chadDanforth,
                 actor: 'Corbin Bleu',
                 personaje: 'Chad Danforth'
             },
             {
                 id: 6,
-                imagen: '',
+                imagen: taylorMcKessie,
                 actor: 'Monique Coleman',
                 personaje: 'Taylor McKessie'
             }
@@ -67,11 +85,11 @@ export const CATALOGO_PELIS = [
 
 
         //TRAILER
-        trailerVideo: '',
+        trailerVideo: 'https://www.youtube.com/embed/d3fxIvliIj4',
         cita: '«East High es tener amigos que conservaremos por el resto de nuestras vidas, y eso significa que realmente estamos ‘juntos en esto».',
-        autorCita: '',
+        autorCita: 'Troy Bolton',
 
         //GALERIA
-        imagenesGaleria: ['', '', '', '', '', '']
+        imagenesGaleria: [galeriaHs1, galeriaHs2, galeriaHs3, galeriaHs4, galeriaHs5, galeriaHs6, galeriaHs7, galeriaHs8]
     }
 ]
