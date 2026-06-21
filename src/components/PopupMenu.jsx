@@ -27,36 +27,36 @@ const PopupMenu = ({ popupIsOpen, setpopupIsOpen }) => (
         </ul >
         <ul className="flex flex-col gap-6 p-6 text-2xl font-pixel px-15">
             <li>
-                <Link to="/" className="flex gap-6">
+                <Link to="/" onClick={() => setpopupIsOpen(false)} className="flex gap-6">
                     <img src={homeIcon} alt="Home" className="w-6 h-6" />
                     <span className="uppercase">Home</span>
                 </Link>
             </li>
             <li>
-                <Link to="/Tickets" className="flex gap-6">
+                <Link to="/Tickets" onClick={() => setpopupIsOpen(false)} className="flex gap-6">
                     <img src={ticketIcon} alt="Tickets" className="w-6 h-6" />
                     <span className="uppercase">Tickets</span>
                 </Link></li>
             <li>
-                <Link to="/Cartelera" className="flex gap-6">
+                <Link to="/Cartelera" onClick={() => setpopupIsOpen(false)} className="flex gap-6">
                     <img src={carteleraIcon} alt="Cartelera" className="w-6 h-6" />
                     <span className="uppercase">Cartelera</span>
                 </Link>
             </li>
             <li>
-                <Link to="/Festival" className="flex gap-6">
+                <Link to="/Festival" onClick={() => setpopupIsOpen(false)} className="flex gap-6">
                     <img src={festivalIcon} alt="Festival" className="w-6 h-6" />
                     <span className="uppercase">Festival</span>
                 </Link>
             </li>
             <li>
-                <Link to="/Agenda" className="flex gap-6">
+                <Link to="/Agenda" onClick={() => setpopupIsOpen(false)} className="flex gap-6">
                     <img src={agendaIcon} alt="Agenda" className="w-6 h-6" />
                     <span className="uppercase">Agenda</span>
                 </Link>
             </li>
             <li>
-                <Link to="/User" className="flex gap-6">
+                <Link to="/User" onClick={() => setpopupIsOpen(false)} className="flex gap-6">
                     <img src={userIcon} alt="User" className="w-6 h-6" />
                     <span className="uppercase">User</span>
                 </Link>
