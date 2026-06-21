@@ -10,6 +10,8 @@ import PopupMenu from './PopupMenu';
 
 const Header = () => {
 
+
+
   const [language, setLanguage] = useState('ES');
   /* por defecto español que es lo que se guarda en lenguage */
 
@@ -33,6 +35,7 @@ const Header = () => {
     }
   }
 
+  const [popupIsOpen, setpopupIsOpen] = useState(false);
 
   return (
     <header className="w-full">
@@ -90,7 +93,7 @@ const Header = () => {
           </button>
 
           {/* Hamburger Menu Button */}
-          <button
+          <button onClick={() => setpopupIsOpen(!popupIsOpen)}
             className="w-6 h-6 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
             aria-label="Menu"
           >
@@ -102,7 +105,8 @@ const Header = () => {
       {/* HACER VERSIÓN ORDENADOR */}
 
       <BottomBar />
-      <PopupMenu />
+      <PopupMenu popupIsOpen={popupIsOpen} setpopupIsOpen={setpopupIsOpen} />
+      {/* estamos diciendole al popupmenu cuales son sus props */}
 
     </header>
   );
