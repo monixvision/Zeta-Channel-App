@@ -3,71 +3,73 @@ export const CATALOGO_PELIS = [
     {
         //CARD 
         id: 1,
-        titulo: 'High School Musical', // poner , y no ; !!!
-        imagen: '', 
+        dia: 14,
+        tituloEsp: 'High School Musical', // poner , y no ; !!!
+        imagen: '',
         tipo: 'Película', // serie, pelicula o actividad
-        duracion: '',
-        fecha: '',
-        horario: ['', ''], // ponemos un array para el horario, ya que puede haber más de uno
+        duracion: 98,
+        fecha: 2006,
+        horario: ['12:30', '19:30S'], // ponemos un array para el horario, ya que puede haber más de uno
 
         //ARTICULO -- info anterior y esta
         cartel: '',
-        sala: '',
+        sala: 1,
 
         //INFO DESPLEGABLE
-        tituloEsp: '', // pensar si este va a ser el que salga de principal (por si lo borro)
-        tituloVo: '',
-        autoria: '',
-        bandaSonora: '',
-        saga: ['', ''],
-        genero: '', // categorias
-        sinopsis: '',
+
+        tituloVo: 'High School Musical',
+        directorx: 'Kenny Ortega',
+        bandaSonora: 'We`re All In This Together',
+        saga: ['HS Musical 2', 'HS Musical 3'],
+        genero: ['Musical', 'Romance'], // categorias
+        sinopsis: 'Un atleta popular de secundaria y una chica académicamente talentosa consiguen papeles en el musical de la escuela y desarrollan una amistad que amenaza el orden social de East High.',
 
         //REPARTO DESPLEGABLE
         personajes: [ // array de objetos, cada objeto con id, imagen, nombre y personaje
             {
                 id: 1,
                 imagen: '',
-                nombre: '',
-                personaje: ''
+                actor: 'Zac Efron',
+                personaje: 'Troy Bolton'
             },
             {
                 id: 2,
                 imagen: '',
-                nombre: '',
-                personaje: ''
+                actor: 'Vanessa Hudgens',
+                personaje: 'Gabriella Montez'
             },
+
             {
                 id: 3,
                 imagen: '',
-                nombre: '',
-                personaje: ''
+                actor: 'Ashley French',
+                personaje: 'Sharpay Evans'
             },
             {
                 id: 4,
                 imagen: '',
-                nombre: '',
-                personaje: ''
+                actor: 'Lucas Grabeel',
+                personaje: 'Ryan Evans'
             },
             {
                 id: 5,
                 imagen: '',
-                nombre: '',
-                personaje: ''
+                actor: 'Corbin Bleu',
+                personaje: 'Chad Danforth'
             },
             {
                 id: 6,
                 imagen: '',
-                nombre: '',
-                personaje: ''
+                actor: 'Monique Coleman',
+                personaje: 'Taylor McKessie'
             }
         ],
-        
+
 
         //TRAILER
         trailerVideo: '',
-        cita: '',
-        auotorCita: '',
+        cita: '«East High es tener amigos que conservaremos por el resto de nuestras vidas, y eso significa que realmente estamos ‘juntos en esto».',
+        autorCita: '',
 
         //GALERIA
         imagenesGaleria: ['', '', '', '', '', '']
