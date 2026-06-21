@@ -21,12 +21,12 @@ export const CATALOGO_PELIS = [
     {
         //CARD 
         id: 1,
+        slug: 'high-school-musical',
         dia: 14,
         tituloEsp: 'High School Musical', // poner , y no ; !!!
         imagen: portada1,
         tipo: 'Película', // serie, pelicula o actividad
         duracion: 98,
-        fecha: 2006,
         horario: ['12:30', '19:30S'], // ponemos un array para el horario, ya que puede haber más de uno
 
         //ARTICULO -- info anterior y esta
