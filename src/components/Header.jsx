@@ -106,7 +106,7 @@ const Header = () => {
 
       <BottomBar />
       <PopupMenu popupIsOpen={popupIsOpen} setpopupIsOpen={setpopupIsOpen} />
-      {/* estamos diciendole al popupmenu cuales son sus props */}
+      {/* estamos diciendole al popupmenu cuales son sus props para luego aplicarlas */}
 
     </header>
   );
