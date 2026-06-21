@@ -1,1 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Pixelify+Sans:wght@400..700&display=swap');
+
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+/* esto lo que hace es rechazar el modo por defecto que tengas en el ordenador para que puedas elegir el que quieras */
+@theme {
+/* Estos son los colores basicos */
+--color-black: #010101;
+--color-grey: #C8C8C8;
+--color-white: #F3F3F3;
+/* Estos son los colores principales */
+--color-blue: #3467F2;
+--color-pink: #E6B8E7;
+--color-green: #61D472;
+/* Estos son los colores de hover */
+--color-blue-hover: #6891FF;
+--color-pink-hover: #FD8BFF;
+--color-green-hover: #7BF1A8;
+/* Este es el color para alertas */
+--color-red-alert: #DF3232;
+/* Estos son los colores para el tema de pixeles */
+--color-pix-light: #C5D2F3;
+--color-pix-dark: #0D1A3B;
+/* Estos son los colores para el tema claro y oscuro */
+--color-dark: var(--black);
+--color-light: var(--white);
+/* Estas son las fuentes */
+--font-sans: 'Lexend', sans-serif;
+--font-pixel: 'Pixelify Sans', sans-serif;
+}
