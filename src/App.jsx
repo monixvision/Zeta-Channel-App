@@ -25,7 +25,7 @@ const App = () => (
         <Route path="/Festival" element={<Festival />} />
         <Route path="/Agenda" element={<Agenda />} />
         <Route path="/User" element={<User />} />
-        {/* <Route path="/Articulo" element={<Articulo />} />
+        {/* <Route path="/Articulo/:slug" element={<Articulo />} />
         <Route path="/Error404" element={<Error404 />} />
         <Route path="*" element={<Navigate to="/Error404" replace />} /> */}
         {/* Ruta para cualquier otra ruta no definida y usamos Navigate para redirigir a la página de error */}
