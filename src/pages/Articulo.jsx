@@ -1,17 +1,17 @@
 import { useParams, Navigate } from 'react-router-dom';
 
-import FILMS from '../assets/data/films.js';
+import CATALOGO from '../assets/data/films.js';
 /* import Error404 from './Error404.jsx'; */
 
 const Articulo = () => {
     /* 1. Capturamos el slug de la URL */
     const { slug } = useParams();
     /* 2. Buscamos el artículo en el catálogo */
-    const catalogo = FILMS.find(item => item.slug === slug);
+    const catalogo = CATALOGO.find(item => item.slug === slug);
     /* 3. Si no encontramos el artículo, redirigimos a la página de error */
     /* if (!catalogo) {
-        return <Navigate to="/Error404" replace />;
-    } */
+        return <Navigate to="/Error404" replace />; */
+
 
     const { tituloEsp, dia, imagen, tipo, duracion, horario, cartel, sala, tituloVo, directorx, bandaSonora, saga, genero, sinopsis, personajes, trailerVideo, cita, autorCita, imagenesGaleria } = catalogo;
 

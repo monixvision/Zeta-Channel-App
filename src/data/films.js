@@ -17,7 +17,7 @@ import galeriaHs7 from '../assets/img/cartelera/high-school-musical/galeria-7.we
 import galeriaHs8 from '../assets/img/cartelera/high-school-musical/galeria-8.webp';
 
 
-export const CATALOGO_PELIS = [
+export const CATALOGO = [
     {
         //CARD 
         id: 1,
