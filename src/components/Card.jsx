@@ -1,6 +1,7 @@
 import { /* Link */ } from 'react-router-dom';
 
 import btnMas from '../assets/img/icon/icon-btn-mas.svg';
+/* import Btn from './Btn'; */
 
 const Card = ({ card }) => {
     const { tituloEsp, imagen, tipo, duracion, /* dia, horario, slug */ } = card;
