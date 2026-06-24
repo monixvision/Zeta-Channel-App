@@ -32,7 +32,7 @@ const Card = ({ card, orientacion }) => {
                         </li>
                         <li className="w-full h-2 bg-white"></li>
                         <li>
-                            <Btn text={dia} variant='solidgreen' color='green' size='xs' font='sans' />
+                            <Btn text={dia} variant='solidgreen' size='xs' font='sans' />
                             <div>
                                 <Btn text={horario[0]} variant='outlinewhite' size='xs' font='sans' />
                             </div>
