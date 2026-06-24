@@ -6,19 +6,16 @@ import labelCard1 from '../assets/img/label-card-horizontal.svg';
 import labelCard2 from '../assets/img/label-card-vertical.svg';
 
 
-const Card = ({ card, orientacion }) => {
+const Card = ({ card }) => {
     const { tituloEsp, imagen, tipo, duracion, dia, horario, slug
     } = card;
 
-    const orientacionStyle = {
-        horizontal: 'px-4 pt-[42px]',
-        vertical: 'flex-cols px-3 pt-[48px]'
-    }
-    const orientacionLabel = "w-full absolute -top-4 left-4"
-
     return (
-        <div className={`${orientacionStyle[orientacion]} bg-pink hover:bg-blue transition-colors rounded-4xl flex flex-col`}>
-            {orientacion === 'horizontal' ? <img src={labelCard1} alt="Etiqueta de card horizontal" className={orientacionLabel} /> : <img src={labelCard2} alt="Etiqueta de card vertical" className={orientacionLabel} />}
+        <div className="bg-pink hover:bg-blue transition-colors rounded-l-2xl rounded-br-2xl flex flex-col">
+            <div className="absolute top-14 right-0 w-50%">
+                <img src={labelCard1} alt="Label Card" className="block w-full relative lg:hidden text-pink" />
+                <img src={labelCard2} alt="Label Card" className="hidden w-full relative -top-4 left-4 lg:block" />
+            </div>
             <div className="flex gap-4">
                 <div className='flex flex-col gap-4 font-sans'>
 
