@@ -17,11 +17,10 @@ const Card = ({ card, orientacion }) => {
     const orientacionLabel = "w-full absolute -top-4 left-4"
 
     return (
-        <div>
+        <div className={`${orientacionStyle[orientacion]} bg-pink hover:bg-blue transition-colors rounded-4xl flex flex-col`}>
             {orientacion === 'horizontal' ? <img src={labelCard1} alt="Etiqueta de card horizontal" className={orientacionLabel} /> : <img src={labelCard2} alt="Etiqueta de card vertical" className={orientacionLabel} />}
-
-            <div className={`flex ${orientacionStyle[orientacion]} bg-pink hover:bg-blue transition-colors rounded-4xl`}>
-                <div className='flex flex-shrink-0 flex-grow-0 flex-col gap-4 font-sans'>
+            <div className="flex gap-4">
+                <div className='flex flex-col gap-4 font-sans'>
 
                     <h1 className='text-2xl font-bold'>{tituloEsp}</h1>
 
@@ -41,9 +40,12 @@ const Card = ({ card, orientacion }) => {
                     </ul>
 
                 </div>
-                <div className='flex-shrink-0 ml-4'>
-                    <img src={imagen} alt={tituloEsp} />
-                    <Link to={`/cartelera/${slug}`}>
+                <div>
+                    <div className="w-[150px] h-full overflow-hidden rounded-3xl">
+                        <img src={imagen} alt={tituloEsp} className="w-full h-full object-cover scale-[2.0] transform origin-[70%_0]" />
+                    </div>
+
+                    <Link to={`/cartelera/${slug}`} className="absolute top-0 left-0">
                         <img src={btnMas} alt="Más información" />
                     </Link>
                 </div>
