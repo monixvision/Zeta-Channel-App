@@ -5,6 +5,7 @@ import Btn from './Btn';
 import labelCard1 from '../assets/img/label-card-horizontal.svg';
 import labelCard2 from '../assets/img/label-card-vertical.svg';
 
+
 const Card = ({ card, orientacion }) => {
     const { tituloEsp, imagen, tipo, duracion, dia, horario, slug
     } = card;

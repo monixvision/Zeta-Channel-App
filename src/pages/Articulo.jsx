@@ -18,7 +18,7 @@ const Articulo = () => {
         return <Navigate to="/Error404" replace />; */
 
 
-    const { tituloEsp, /* dia, imagen, tipo, duracion, horario, cartel, sala, tituloVo, directorx, bandaSonora, saga, genero, sinopsis, personajes, trailerVideo, cita, autorCita, imagenesGaleria */ } = catalogo;
+    const { tituloEsp, imagen,/* dia,  tipo, duracion, horario, cartel, sala, tituloVo, directorx, bandaSonora, saga, genero, sinopsis, personajes, trailerVideo, cita, autorCita, imagenesGaleria */ } = catalogo;
 
     /* 4.Si la pelicula existe, mostramos su información */
 
