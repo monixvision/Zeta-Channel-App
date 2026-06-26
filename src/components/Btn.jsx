@@ -34,7 +34,7 @@ const Btn = ({
 
         solidgrey: "bg-neutral-400 text-neutral-700",
 
-        solidblue: "bg-neutral-400 text-neutral-700 hover:bg-neutral-400",
+        solidblue: "bg-blue text-dark hover:bg-hover-blue",
         outlineblue: "border-2 border-neutral-400 text-neutral-700 hover:border-grey",
 
         solidpink: "bg-pink text-black hover:bg-pink-hover",
