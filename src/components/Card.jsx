@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 
 import btnMas from '../assets/img/icon/icon-btn-mas.svg';
 import Btn from './Btn';
+import LabelCardVertical from './LabelCardVertical.jsx';
 import labelCard1 from '../assets/img/label-card-horizontal.svg';
-import labelCard2 from '../assets/img/label-card-vertical.svg';
 
 
 const Card = ({ card }) => {
@@ -11,10 +11,12 @@ const Card = ({ card }) => {
     } = card;
 
     return (
-        <div className="bg-pink hover:bg-blue transition-colors rounded-l-2xl rounded-br-2xl flex flex-col">
+        <div className="bg-pink hover:bg-blue rounded-l-2xl rounded-br-2xl flex flex-col group transition-colors">
             <div className="absolute top-14 right-0 w-50%">
                 <img src={labelCard1} alt="Label Card" className="block w-full relative lg:hidden text-pink" />
-                <img src={labelCard2} alt="Label Card" className="hidden w-full relative -top-4 left-4 lg:block" />
+                <LabelCardVertical className="hidden w-full relative lg:block text-pink group-hover:text-blue transition-colors" />
+
+                {/* He tenido que crear un componente al svg para poder ponerle el hover como className y además hacer el group-hover para que se haga en modo grupo */}
             </div>
             <div className="flex gap-4">
                 <div className='flex flex-col gap-4 font-sans'>
