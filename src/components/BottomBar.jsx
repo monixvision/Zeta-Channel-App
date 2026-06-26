@@ -13,7 +13,7 @@ const BottomBar = () => {
 
     return (
         /* hacer que el pop up se pueda mover */
-        <div className="flex flex-col items-center justify-center fixed bottom-0 left-0 w-full bg-dark dark:bg-blue text-white dark:text-black z-9999">
+        <div className="flex flex-col items-center justify-center fixed bottom-0 left-0 w-full bg-dark dark:bg-blue text-white dark:text-black z-9999 lg:hidden">
             <nav>
                 <ul className="flex justify-around items-center w-full gap-3 py-3 font-pixel">
                     <li className="order-3 w-[63px]">

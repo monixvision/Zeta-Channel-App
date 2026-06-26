@@ -113,3 +113,5 @@ const Header = () => {
 };
 
 export default Header;
+
+/* Hacer la version tablet y pc para dejarlos listos */

@@ -57,3 +57,4 @@ const PopupMenu = ({ popupIsOpen, setpopupIsOpen }) => (
 
 export default PopupMenu;
 
+/* HACER LA VERSION TABLET Y PC */
