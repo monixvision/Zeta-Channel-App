@@ -17,7 +17,7 @@ const Btn = ({
     }
 
     const sizeStyle = {
-        lg: 'text-2xl ',
+        lg: 'text-2xl',
         xs: 'text-base',
     }
 
