@@ -8,7 +8,7 @@ const Btn = ({
     size = "lg",
     ...props
 }) => {
-    const baseStyles = 'flex item-center justify-center rounded-full cursor-pointer transition-colors uppercase px-4 py-1';
+    const baseStyles = 'flex item-center justify-center rounded-full cursor-pointer transition-colors uppercase px-3 py-1 text-center whitespace-nowrap ';
     /* estilo base de todas las variantes */
 
     const fontStyle = {
@@ -24,21 +24,23 @@ const Btn = ({
 
     const variantStyles = {
         solidgreen: "bg-green text-black hover:bg-green-hover",
-        outlinegreen: ` border-2 border-green text-black hover:border-green-hover`,
+        outlinegreen: "ring-2 ring-green ring-inset text-black hover:border-green-hover",
 
         solidwhite: "bg-white text-black hover:bg-pix-light",
-        outlinewhite: "border-2 border-white text-black hover:border-pix-light",
+        outlinewhite: "ring-2 ring-white ring-inset text-black hover:border-pix-light",
 
         solidblack: "bg-black text-white hover:bg-pix-dark",
-        outlineblack: "border-2 border-black text-white hover:border-pix-dark",
+        outlineblack: "ring-2 ring-black ring-inset text-black hover:border-pix-dark",
 
         solidgrey: "bg-neutral-400 text-neutral-700",
 
-        solidblue: "bg-blue text-dark hover:bg-hover-blue",
-        outlineblue: "border-2 border-neutral-400 text-neutral-700 hover:border-grey",
+        solidblue: "bg-blue text-black hover:bg-hover-blue",
+        outlineblue: "ring-2 ring-blue ring-inset text-black hover:border-blue-hover",
+
+        /* ARREGLAR CONTRASTE BTN AZUL */
 
         solidpink: "bg-pink text-black hover:bg-pink-hover",
-        outlinepink: "border-2 border-pink text-black hover:border-pink-hover",
+        outlinepink: "ring-2 ring-pink ring-inset text-black hover:border-pink-hover",
     };
 
     const btnClass = `${baseStyles} ${fontStyle[font]} ${sizeStyle[size]} ${variantStyles[variant]}`;

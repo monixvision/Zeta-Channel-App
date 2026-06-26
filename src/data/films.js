@@ -27,7 +27,7 @@ export const CATALOGO = [
         imagen: portada1,
         tipo: 'Película', // serie, pelicula o actividad
         duracion: 98,
-        horario: ['12:30', '19:30S'], // ponemos un array para el horario, ya que puede haber más de uno
+        horario: ['12:30', '19:30'], // ponemos un array para el horario, ya que puede haber más de uno
 
         //ARTICULO -- info anterior y esta
         cartel: cartel1,
