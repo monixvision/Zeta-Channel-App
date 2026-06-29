@@ -3,10 +3,11 @@ import { useState } from 'react';
 import logoZeta from '../assets/img/logo-zeta-channel.svg';
 import lightbulbIcon from '../assets/img/icon/icon-lightbulb.svg';
 import searchIcon from '../assets/img/icon/icon-search.svg';
-import menuIcon from '../assets/img/icon/icon-menu.svg';
-/* import ticketIcon from '../assets/img/icon/icon-ticket.svg'; */
+import ticketIcon from '../assets/img/icon/icon-ticket.svg';
 import BottomBar from './BottomBar';
 import PopupMenu from './PopupMenu';
+import Btn from './Btn';
+import BtnBurguer from './BtnBurguer';
 
 const Header = () => {
 
@@ -41,17 +42,45 @@ const Header = () => {
     <header className="w-full">
 
 
-      <nav className="bg-light dark:bg-dark text-black dark:text-white flex items-center w-full justify-between px-3 fixed top-0 left-0 z-9999">
+      <nav className="bg-light dark:bg-dark text-black dark:text-white flex items-center w-full justify-between px-3 fixed top-0 left-0 z-9999 lg:px-6">
+
+        {/* Burguer y componente btn para TABLET  */}
+
+        <div className="items-center gap-5 hidden md:flex lg:hidden">
+          <BtnBurguer popupIsOpen={popupIsOpen} setpopupIsOpen={setpopupIsOpen} />
+          <Btn
+            text={
+              <div className="flex items-center">
+                <img src={ticketIcon} alt="Icono" className="w-5 h-5 mr-3" />
+                Tickets
+              </div>}
+            variant="solidgreen"
+            size="xs"
+            font="pixel"
+            to="/Tickets"
+          />
+        </div>
+
+        {/* He hecho que en el PC la bottom bar pase al header reutilizando el componente */}
+        <div className="hidden lg:flex">
+          <BottomBar />
+        </div>
+
+
+        {/* ESTA ES EL LOGO */}
 
         <div className="pt-2.5">
           {/* intentar hacer que los ojos sigan el ratón con el cursor */}
           <Link to="/">
-            <img alt="Zeta Channel Logo" className="w-[60px]" src={logoZeta} />
+            <img alt="Zeta Channel Logo" className="w-[60px] lg:w-[120px]" src={logoZeta} />
           </Link>
           {/* LA / TE LLEVA A LA PAGINA PRINCIPAL */}
         </div>
 
+        {/* ESTO ES FIJO SIEMPRE IDIOMA - MODO OSCURO CLARO - LUPA + BURGUER MOVIL */}
+
         <div className="flex gap-6 items-center">
+
           {/* Seleccionador de Idioma */}
           <button
             onClick={toggleLanguage}
@@ -84,6 +113,7 @@ const Header = () => {
             <img alt="Lightbulb Icon" className="h-6 w-5 dark:invert" src={lightbulbIcon} />
           </button>
 
+
           {/* Boton de Busqueda */}
           <button
             className="w-6 h-6 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
@@ -92,19 +122,34 @@ const Header = () => {
             <img alt="Search Icon" className="h-6 w-6 dark:invert" src={searchIcon} />
           </button>
 
-          {/* Hamburger Menu Button */}
-          <button onClick={() => setpopupIsOpen(!popupIsOpen)}
-            className="w-6 h-6 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
-            aria-label="Menu"
-          >
-            <img alt="Menu Icon" className="h-6 w-6 dark:invert" src={menuIcon} />
-          </button>
+
+          {/* MENU BURGER MOVIL */}
+          <div className="md:hidden">
+            <BtnBurguer popupIsOpen={popupIsOpen} setpopupIsOpen={setpopupIsOpen} />
+          </div>
+
+          <div className="hidden lg:block">
+            <Btn
+              text={
+                <div className="flex items-center">
+                  <img src={ticketIcon} alt="Icono" className="w-5 h-5 mr-3" />
+                  Tickets
+                </div>}
+              variant="solidgreen"
+              size="lg"
+              font="pixel"
+              to="/Tickets"
+            />
+          </div>
         </div>
       </nav>
 
-      {/* HACER VERSIÓN ORDENADOR */}
+      {/* BOTTOM BAR Y POP UP */}
 
-      <BottomBar />
+      <div className="lg:hidden">
+        <BottomBar />
+      </div>
+
       <PopupMenu popupIsOpen={popupIsOpen} setpopupIsOpen={setpopupIsOpen} />
       {/* estamos diciendole al popupmenu cuales son sus props para luego aplicarlas */}
 
@@ -113,3 +158,5 @@ const Header = () => {
 };
 
 export default Header;
+
+/* TO DO: Hacer la version tablet y pc para dejarlos listos */
