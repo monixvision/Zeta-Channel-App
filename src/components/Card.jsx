@@ -70,7 +70,7 @@ const Card = ({ card }) => {
                         <img src={imagen} alt={tituloEsp} className="w-full h-full object-cover scale-[2.0] transform origin-[75%_0] md:origin-[60%_0]" />
                     </div>
 
-                    <Link to={`/cartelera/${slug}`} className="absolute bottom-3 right-4">
+                    <Link to={`/Cartelera/${slug}`} className="absolute bottom-3 right-4">
                         <img src={btnMas} alt="Más información" />
                     </Link>
                 </div>

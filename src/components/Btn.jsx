@@ -37,7 +37,7 @@ const Btn = ({
         solidblue: "bg-blue text-black hover:bg-hover-blue",
         outlineblue: "ring-2 ring-blue ring-inset text-black hover:border-blue-hover",
 
-        /* ARREGLAR CONTRASTE BTN AZUL */
+        /* TO DO: ARREGLAR CONTRASTE BTN AZUL */
 
         solidpink: "bg-pink text-black hover:bg-pink-hover",
         outlinepink: "ring-2 ring-pink ring-inset text-black hover:border-pink-hover",

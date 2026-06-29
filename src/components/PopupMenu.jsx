@@ -8,7 +8,6 @@ import agendaIcon from '../assets/img/icon/icon-agenda.svg';
 import userIcon from '../assets/img/icon/icon-user.svg';
 import festivalIcon from '../assets/img/icon/icon-festival.svg';
 
-/* intentar que puedas arrastrarlo por la pantalla */
 
 const PopupMenu = ({ popupIsOpen, setpopupIsOpen }) => (
 
@@ -57,4 +56,5 @@ const PopupMenu = ({ popupIsOpen, setpopupIsOpen }) => (
 
 export default PopupMenu;
 
-/* HACER LA VERSION TABLET Y PC */
+/* TO DO: Hacer la version table y pc */
+/* TO DO: hacer que el pop up se pueda mover Y ARRASTRAR */

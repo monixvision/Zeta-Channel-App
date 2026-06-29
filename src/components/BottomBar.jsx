@@ -12,10 +12,9 @@ const BottomBar = () => {
     const { pathname } = useLocation();
 
     return (
-        /* hacer que el pop up se pueda mover */
-        <div className="flex flex-col items-center justify-center fixed bottom-0 left-0 w-full bg-dark dark:bg-blue text-white dark:text-black z-9999 lg:hidden">
+        <div className="flex items-center justify-center fixed bottom-0 left-0 w-full bg-dark dark:bg-blue text-white dark:text-black z-9999 lg:hidden">
             <nav>
-                <ul className="flex justify-around items-center w-full gap-3 py-3 font-pixel">
+                <ul className="flex justify-around items-center w-full gap-3 py-3 font-pixel md:gap-10">
                     <li className="order-3 w-[63px]">
                         <Link to="/" className="flex flex-col items-center justify-center gap-1 ">
                             <img src={homeIcon} alt="Home" className="invert dark:invert-0 w-6 h-6" />
@@ -53,3 +52,5 @@ const BottomBar = () => {
 }
 
 export default BottomBar;
+
+/* TO DO: que cuando esté el user añadido cambie el icono de User */
