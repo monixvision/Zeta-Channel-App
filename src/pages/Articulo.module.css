@@ -1,0 +1,10 @@
+
+.roll{
+    animation: roll 10s linear infinite;  
+}
+
+@keyframes roll {
+    100% {
+        background-position: -1280px 0;
+    }
+}
