@@ -4,9 +4,10 @@ import logoZeta from '../assets/img/logo-zeta-channel.svg';
 import lightbulbIcon from '../assets/img/icon/icon-lightbulb.svg';
 import searchIcon from '../assets/img/icon/icon-search.svg';
 import menuIcon from '../assets/img/icon/icon-menu.svg';
-/* import ticketIcon from '../assets/img/icon/icon-ticket.svg'; */
+import ticketIcon from '../assets/img/icon/icon-ticket.svg';
 import BottomBar from './BottomBar';
 import PopupMenu from './PopupMenu';
+import Btn from './Btn';
 
 const Header = () => {
 
@@ -42,6 +43,27 @@ const Header = () => {
 
 
       <nav className="bg-light dark:bg-dark text-black dark:text-white flex items-center w-full justify-between px-3 fixed top-0 left-0 z-9999">
+
+        <div className="items-center gap-5 hidden md:flex">
+          <button onClick={() => setpopupIsOpen(!popupIsOpen)}
+            className="w-6 h-6 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
+            aria-label="Menu"
+          >
+            <img alt="Menu Icon" className="h-6 w-6 dark:invert" src={menuIcon} />
+          </button>
+          <Btn
+            text={
+              <div className="flex items-center">
+                <img src={ticketIcon} alt="Icono" className="w-5 h-5 mr-3" />
+                Tickets
+              </div>}
+            variant="solidgreen"
+            size="xs"
+            font="pixel"
+            to="/Tickets"
+          />
+        </div>
+
 
         <div className="pt-2.5">
           {/* intentar hacer que los ojos sigan el ratón con el cursor */}
@@ -94,7 +116,7 @@ const Header = () => {
 
           {/* Hamburger Menu Button */}
           <button onClick={() => setpopupIsOpen(!popupIsOpen)}
-            className="w-6 h-6 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
+            className="w-6 h-6 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150 md:hidden"
             aria-label="Menu"
           >
             <img alt="Menu Icon" className="h-6 w-6 dark:invert" src={menuIcon} />
@@ -114,4 +136,4 @@ const Header = () => {
 
 export default Header;
 
-/* Hacer la version tablet y pc para dejarlos listos */
+/* TO DO: Hacer la version tablet y pc para dejarlos listos */
