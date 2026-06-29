@@ -2,7 +2,7 @@ import Btn from "../components/Btn"
 
 const Home = () => {
     return (
-        <div className="pt-[52px]">
+        <div className="pt-[52px] lg:pt-[120px]">
             <h1>Home</h1>
             <p>Welcome to the Home page!</p>
             <div className="flex justify-center">
