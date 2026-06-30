@@ -42,7 +42,7 @@ const Header = () => {
     <header className="w-full">
 
 
-      <nav className="bg-light dark:bg-dark text-black dark:text-white flex items-center w-full justify-between px-3 fixed top-0 left-0 z-9999 lg:px-6">
+      <nav className="bg-light dark:bg-dark text-black dark:text-white flex items-center w-full justify-between px-3 fixed top-0 left-0 z-998 lg:px-6">
 
         {/* Burguer y componente btn para TABLET  */}
 
@@ -87,10 +87,10 @@ const Header = () => {
             className="flex flex-col items-center justify-center cursor-pointer font-pixel text-2xl"
           >
             <div className="flex gap-1 items-center justify-center">
-              <span className="text-black dark:text-white leading-6">
+              <span className="text-black dark:text-white leading-6 ">
                 ES
               </span>
-              <span className="text-black dark:text-white leading-6">
+              <span className="text-black dark:text-white leading-6 ">
                 /
               </span>
               <span className="text-black dark:text-white leading-6">
@@ -107,19 +107,19 @@ const Header = () => {
           {/* Boton que cambia de Modo */}
           <button
             onClick={toggleTheme}
-            className=" w-6 h-6 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800"
+            className=" w-6 h-6 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer lg:w-8 lg:h-8"
             aria-label="Toggle theme"
           >
-            <img alt="Lightbulb Icon" className="h-6 w-5 dark:invert" src={lightbulbIcon} />
+            <img alt="Lightbulb Icon" className="h-6 w-5 lg:w-7 lg:h-8 dark:invert" src={lightbulbIcon} />
           </button>
 
 
           {/* Boton de Busqueda */}
           <button
-            className="w-6 h-6 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150"
+            className="w-6 h-6 flex items-center justify-center rounded hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer size-6 transition-colors duration-150 lg:w-8 lg:h-8"
             aria-label="Search"
           >
-            <img alt="Search Icon" className="h-6 w-6 dark:invert" src={searchIcon} />
+            <img alt="Search Icon" className="h-6 w-6 lg:w-8 lg:h-8 dark:invert" src={searchIcon} />
           </button>
 
 
