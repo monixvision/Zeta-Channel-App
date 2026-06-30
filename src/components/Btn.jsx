@@ -18,7 +18,7 @@ const Btn = ({
 
     const sizeStyle = {
         lg: 'text-2xl',
-        xs: 'text-base',
+        xs: 'text-base'
     }
 
 
@@ -30,11 +30,11 @@ const Btn = ({
         outlinewhite: "ring-2 ring-white ring-inset text-black hover:border-pix-light",
 
         solidblack: "bg-black text-white hover:bg-pix-dark",
-        outlineblack: "ring-2 ring-black ring-inset text-black hover:border-pix-dark",
+        outlineblack: "ring-2 ring-black ring-inset text-black hover:border-pix-dark group-hover:ring-white group-hover:text-white",
 
         solidgrey: "bg-neutral-400 text-neutral-700",
 
-        solidblue: "bg-blue text-black hover:bg-hover-blue",
+        solidblue: "bg-blue text-black hover:bg-hover-blue group-hover:bg-pink",
         outlineblue: "ring-2 ring-blue ring-inset text-black hover:border-blue-hover",
 
         /* TO DO: ARREGLAR CONTRASTE BTN AZUL */
