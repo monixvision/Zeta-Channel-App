@@ -243,7 +243,7 @@ export const CATALOGO = [
     },
     {
         //CARD 
-        id: 2,
+        id: 4,
         slug: 'high-school-musical',
         dia: 14,
         tituloEsp: 'High School Musical', // poner , y no ; !!!
