@@ -82,4 +82,5 @@ const Card = ({ card }) => {
 
 export default Card;
 
-/* ARREGLAR VERSION VERTICAL LG */
+/* TO DO: ARREGLAR VERSION VERTICAL LG */
+/* TO DO: IMAGEN REDIMENSIONADA VERSION CARD DE CERCA */
