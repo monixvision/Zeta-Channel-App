@@ -7,6 +7,7 @@ import btnMas from '../assets/img/icon/icon-btn-mas.svg';
 import tiraRollText from '../assets/img/tira-roll-text.svg';
 import styles from './Articulo.module.css';
 import LabelCard from '../components/LabelCard.jsx';
+import CierrePopUp from '../components/CierrePopUp.jsx';
 
 const Articulo = () => {
     /* 1. Capturamos el slug de la URL */
@@ -18,7 +19,7 @@ const Articulo = () => {
         return <Navigate to="/Error404" replace />; */
 
 
-    const { tituloEsp, imagen,/* dia,  tipo, duracion, horario, cartel, sala, tituloVo, directorx, bandaSonora, saga, genero, sinopsis, personajes, trailerVideo, cita, autorCita, imagenesGaleria */ } = catalogo;
+    const { tituloEsp, imagen, cartel,/* dia,  tipo, duracion, horario, sala, tituloVo, directorx, bandaSonora, saga, genero, sinopsis, personajes, trailerVideo, cita, autorCita, imagenesGaleria */ } = catalogo;
 
     /* 4.Si la pelicula existe, mostramos su información */
 
@@ -31,15 +32,15 @@ const Articulo = () => {
                 {/* He tenido que crear un componente al svg para poder ponerle el hover como className y además hacer el group-hover para que se haga en modo grupo */}
             </div>
             <div className="pt-7 pb-6 bg-blue rounded-l-4xl rounded-br-4xl">
-                <div className="flex flex-col gap-8 px-6">
+                <div className="flex flex-col gap-7 px-6">
                     <div className="relative flex flex-col gap-4 md:flex-row md:gap-8">
-                        <Link to="/Entradas" className="absolute z-998 top-0 right-0 w-auto h-auto">
+                        <Link to="/Entradas" className="absolute z-997 top-0 right-0 w-auto h-auto">
                             <img src={btnMas} alt="Más información" />
                         </Link>
                         <div className="relative w-full onject-cover overflow-hidden rounded-4xl">
                             <img src={imagen} alt={tituloEsp} className="w-full" />
                         </div>
-                        <div className="absolute top-0 bottom-0 left-0 right-0 z-998 flex items-center justify-center">
+                        <div className="absolute top-0 bottom-0 left-0 right-0 z-997 flex items-center justify-center">
                             <Btn to="/Entradas" text="comprar" variant='solidgreen' size='lg' font='sans' />
                         </div>
                     </div>
@@ -52,12 +53,11 @@ const Articulo = () => {
                         className={`w-full h-4 ${styles.roll}`}>
                     </div>
                 </div>
-                <div>
-                    <div className="flex bg-black justify-between">
-                        <h3 className="uppercase font-sans text-white text-base ">cartel</h3>
-                        <div>
+                <div className="relative flex flex-col gap-7 px-10">
+                    <div className="p-6 bg-white rounded-xl">
+                        <CierrePopUp text="Cartel" setpopupIsOpen={() => { }} className="absolute top-0 right-0 left-0 mx-10" />
 
-                        </div>
+                        <img src={cartel} alt={tituloEsp} className="w-full rounded-2xl mt-13" />
                     </div>
                 </div>
             </div >
@@ -65,4 +65,4 @@ const Articulo = () => {
     );
 }
 export default Articulo;
-/* TO DO: ARREGLAR ROLLER Y TODO */
+/* TO DO: QUE SE CIERRE EL POPUP DEL CARTEL y versión tablet */
