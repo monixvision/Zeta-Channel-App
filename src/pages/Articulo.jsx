@@ -24,27 +24,33 @@ const Articulo = () => {
 
     return (
         <div className="relative pt-8">
-            <div className="absolute bottom-full right-0 -mb-11 z-10 ml-[110px]">
+            <div className="absolute bottom-full right-0 -mb-11 z-10 ml-27.5">
 
                 <LabelCard className="w-full h-12 relative text-blue" />
 
                 {/* He tenido que crear un componente al svg para poder ponerle el hover como className y además hacer el group-hover para que se haga en modo grupo */}
             </div>
-            <div className="flex flex-col gap-8 px-6 pt-14 pb-6 bg-blue rounded-l-4xl rounded-br-4xl">
-                <div className="relative flex flex-col gap-4 md:flex-row md:gap-8">
-                    <Link to="/Entradas" className="absolute z-998 top-0 right-0 w-auto h-auto">
-                        <img src={btnMas} alt="Más información" />
-                    </Link>
-                    <div className="relative w-full onject-cover overflow-hidden rounded-4xl">
-                        <img src={imagen} alt={tituloEsp} className="w-full" />
+            <div className="pt-7 pb-6 bg-blue rounded-l-4xl rounded-br-4xl">
+                <div className="flex flex-col gap-8 px-6">
+                    <div className="relative flex flex-col gap-4 md:flex-row md:gap-8">
+                        <Link to="/Entradas" className="absolute z-998 top-0 right-0 w-auto h-auto">
+                            <img src={btnMas} alt="Más información" />
+                        </Link>
+                        <div className="relative w-full onject-cover overflow-hidden rounded-4xl">
+                            <img src={imagen} alt={tituloEsp} className="w-full" />
+                        </div>
+                        <div className="absolute top-0 bottom-0 left-0 right-0 z-998 flex items-center justify-center">
+                            <Btn to="/Entradas" text="comprar" variant='solidgreen' size='lg' font='sans' />
+                        </div>
                     </div>
-                    <div className="absolute top-0 bottom-0 left-0 right-0 z-998 flex items-center justify-center">
-                        <Btn to="/Entradas" text="comprar" variant='solidgreen' size='lg' font='sans' />
-                    </div>
+                    <h1 className="text-4xl font-bold uppercase">{tituloEsp}</h1>
                 </div>
-                <h1 className="text-4xl font-bold uppercase">{tituloEsp}</h1>
-                <div style={{ backgroundImage: `url(${tiraRollText})` }}
-                    className={`w-full h-12 bg-repeat-x bg-cover ${styles.roll}`}>
+
+                <div className="bg-pink py-2 my-8">
+                    <div
+                        style={{ backgroundImage: `url(${tiraRollText})` }}
+                        className={`w-full h-4 ${styles.roll}`}>
+                    </div>
                 </div>
                 <div>
                     <div className="flex bg-black justify-between">
