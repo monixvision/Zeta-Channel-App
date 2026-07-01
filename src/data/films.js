@@ -1,5 +1,6 @@
 /* HIGH SCHOOL MUSICAL */
 import portada1 from '../assets/img/cartelera/high-school-musical/portada.webp';
+import portadaCard1 from '../assets/img/cartelera/high-school-musical/portada-card.webp';
 import cartel1 from '../assets/img/cartelera/high-school-musical/cartel.webp';
 import troyBolton from '../assets/img/cartelera/high-school-musical/personaje-troy_bolton.webp';
 import gabriellaMontez from '../assets/img/cartelera/high-school-musical/personaje-gabriella_montez.webp';
@@ -25,6 +26,7 @@ export const CATALOGO = [
         dia: 14,
         tituloEsp: 'High School Musical', // poner , y no ; !!!
         imagen: portada1,
+        imagenCard: portadaCard1,
         tipo: 'Película', // serie, pelicula o actividad
         duracion: 98,
         horario: ['12:30', '19:30'], // ponemos un array para el horario, ya que puede haber más de uno
@@ -100,6 +102,7 @@ export const CATALOGO = [
         dia: 14,
         tituloEsp: 'High School Musical', // poner , y no ; !!!
         imagen: portada1,
+        imagenCard: portadaCard1,
         tipo: 'Película', // serie, pelicula o actividad
         duracion: 98,
         horario: ['12:30', '19:30'], // ponemos un array para el horario, ya que puede haber más de uno
@@ -174,6 +177,7 @@ export const CATALOGO = [
         dia: 14,
         tituloEsp: 'High School Musical', // poner , y no ; !!!
         imagen: portada1,
+        imagenCard: portadaCard1,
         tipo: 'Película', // serie, pelicula o actividad
         duracion: 98,
         horario: ['12:30', '19:30'], // ponemos un array para el horario, ya que puede haber más de uno
@@ -248,6 +252,7 @@ export const CATALOGO = [
         dia: 14,
         tituloEsp: 'High School Musical', // poner , y no ; !!!
         imagen: portada1,
+        imagenCard: portadaCard1,
         tipo: 'Película', // serie, pelicula o actividad
         duracion: 98,
         horario: ['12:30', '19:30'], // ponemos un array para el horario, ya que puede haber más de uno

@@ -7,7 +7,7 @@ import LabelCard from './LabelCard.jsx';
 
 
 const Card = ({ card }) => {
-    const { tituloEsp, imagen, tipo, duracion, dia, horario, slug
+    const { tituloEsp, imagenCard, tipo, duracion, dia, horario, slug
     } = card;
 
     /* const [isHorario1Selected, setIsHorario1Selected] = useState(false);
@@ -71,7 +71,10 @@ const Card = ({ card }) => {
                 </div>
                 <div>
                     <div className="h-full overflow-hidden rounded-3xl">
-                        <img src={imagen} alt={tituloEsp} className="w-full h-full object-cover scale-[2.0] transform origin-[75%_0] md:origin-[60%_0]" />
+                        <img src={imagenCard} alt={tituloEsp} className="will-change-transform w-full h-full object-cover" />
+
+                        {/* Cuando veias la tarjeta sin el will-change-transform la imagen se veia como sin renderizar o pixelada pero cuando acercaba con el zoom en el buscador como que lo arreglaba, le he preguntado a la ia para ver qué era y es que por defecto el buscador como que la renderiza desde el CPU. Y ahora saca la imagen del flujo normal de renderizado de la CPU y le asigna su propia capa de memoria dedicada en la tarjeta gráfica (GPU). Al ser la GPU la que ahora se encarga de pintar esa tarjeta, aplica algoritmos de suavizado mucho más potentes (como los que usa Photoshop o Figma), eliminando el pixelado o el aspecto borroso (ya no sé si eso afectará a la optimización) */}
+
                     </div>
 
                     <Link to={`/Articulo/${slug}`} className="absolute bottom-3 right-4">
