@@ -31,14 +31,18 @@ const Articulo = () => {
                 {/* He tenido que crear un componente al svg para poder ponerle el hover como className y además hacer el group-hover para que se haga en modo grupo */}
             </div>
             <div className="flex flex-col gap-8 px-6 pt-14 pb-6 bg-blue rounded-l-4xl rounded-br-4xl">
-                <div>
-                    <img src={imagen} alt={tituloEsp} className="w-full rounded-4xl" />
-                    <Btn to="/Entradas" text="comprar" variant='solidgreen' size='xs' font='sans' className="abolute bottom-0 top-0 left-0 right-0 mx-auto my-auto" />
-                    <Link to="/Entradas" className="absolute bottom-0 top-0 right-0 mx-auto my-auto w-full h-full">
+                <div className="relative flex flex-col gap-4 md:flex-row md:gap-8">
+                    <Link to="/Entradas" className="absolute z-998 top-0 right-0 w-auto h-auto">
                         <img src={btnMas} alt="Más información" />
                     </Link>
+                    <div className="relative w-full onject-cover overflow-hidden rounded-4xl">
+                        <img src={imagen} alt={tituloEsp} className="w-full" />
+                    </div>
+                    <div className="absolute top-0 bottom-0 left-0 right-0 z-998 flex items-center justify-center">
+                        <Btn to="/Entradas" text="comprar" variant='solidgreen' size='lg' font='sans' />
+                    </div>
                 </div>
-                <h1 className="text-4xl font-bold">{tituloEsp}</h1>
+                <h1 className="text-4xl font-bold uppercase">{tituloEsp}</h1>
                 <div style={{ backgroundImage: `url(${tiraRollText})` }}
                     className={`w-full h-12 bg-repeat-x bg-cover ${styles.roll}`}>
                 </div>
