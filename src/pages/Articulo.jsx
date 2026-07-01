@@ -24,7 +24,7 @@ const Articulo = () => {
 
     return (
         <div className="relative pt-8">
-            <div className="absolute bottom-full right-0 -mb-10 z-10 ml-[110px]">
+            <div className="absolute bottom-full right-0 -mb-11 z-10 ml-[110px]">
 
                 <LabelCard className="w-full h-12 relative text-blue" />
 
