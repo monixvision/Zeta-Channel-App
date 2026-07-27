@@ -1745,8 +1745,8 @@ const CATALOGO = [
 
         //REPARTO DESPLEGABLE
         personajes: [
-            { id: 1, actor: 'Alex "El Manitas"', personaje: 'Artista de campo' },
-            { id: 2, actor: 'Jordi Cruz', personaje: 'Coordinador artístico' }
+            { id: 1, actor: 'Jordi Cruz', personaje: 'Presentador Legendario' },
+            { id: 2, actor: 'El Cabezón (Animatronic)', personaje: 'Consejero de Arte' }
         ],
 
         //TRAILER
@@ -2042,7 +2042,7 @@ function getImagenesPelicula() {
     // Recorremos todas las imágenes encontradas por el glob
     Object.keys(imagenesCartelera).forEach((ruta) => {
         // Verificamos si la ruta pertenece a la película que buscamos
-        const resultado = CATALOGO.find(pelicula => ruta.includes(pelicula.slug));
+        const resultado = CATALOGO.find(pelicula => ruta.includes(`/${pelicula.slug}/`));
         const url = imagenesCartelera[ruta].default;
 
         // Extraemos el nombre del archivo para clasificarlo
@@ -2053,14 +2053,13 @@ function getImagenesPelicula() {
         else if (nombreArchivo.startsWith('cartel.')) resultado.cartel = url;
         else if (nombreArchivo.startsWith('personaje-')) {
             // Guardamos los personajes dinámicamente usando su nombre como clave
-            const nombrePersonaje = nombreArchivo.replace('personaje-', '').replace('.webp', '').replace('.jpg', '').replace('.png', '');
+            const nombrePersonaje = nombreArchivo.replace('personaje-', '').replace('.webp', '').replace('.jpg', '').replace('.png', '').trim().toLowerCase().replaceAll(" ", "-");
             if (!resultado.personajes) resultado.personajes = {};
             const personaje = resultado.personajes.find((p) => p.personaje.toLowerCase().trim().replaceAll(" ", "-") === nombrePersonaje);
             if (personaje) personaje.imagen = url;
         }
         else if (nombreArchivo.startsWith('galeria-')) {
             if (!resultado.imagenesGaleria) resultado.imagenesGaleria = [];
-            console.log(`Agregando imagen de galería para ${resultado.tituloEsp}: ${url}`);
             resultado.imagenesGaleria.push(url);
         }
     });

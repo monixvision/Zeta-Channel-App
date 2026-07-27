@@ -31,6 +31,7 @@ const Articulo = () => {
     const { slug } = useParams();
     /* 2. Buscamos el artículo en el catálogo */
     const catalogo = CATALOGO.find(item => item.slug === slug);
+    console.log(catalogo)
     /* 3. Si no encontramos el artículo, redirigimos a la página de error  */
     if (!catalogo) {
         return <Navigate to="/Error404" replace />;
