@@ -84,7 +84,8 @@ const Cartelera = () => {
                     <h1 className="text-5xl leading-0 font-pixel uppercase text-black dark:text-white md:text-7xl">CARTELERA</h1>
 
                 </div>
-                <div className="md:pb-10 md:px-12 lg:px-60">
+                <div className="md:pb-10  relative w-full">
+
                     <FiltrosCartelera
                         tipoSeleccionado={tipoSeleccionado}
                         setTipoSeleccionado={setTipoSeleccionado}
@@ -92,16 +93,16 @@ const Cartelera = () => {
                         setGeneroSeleccionado={setGeneroSeleccionado}
                         fechaSeleccionada={fechaSeleccionada}
                         setFechaSeleccionada={setFechaSeleccionada}
-
                         totalResultados={pelisFiltradas.length}
+                    />
 
-                    /></div>
+                    {/* TARJETAS FILTRADAS */}
+                    <div className="grid grid-cols-1 gap-16 md:gap-x-10 md:gap-y-20 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-20 lg:gap-y-28 pb-16">
+                        {pelisPaginadas.map(peli => (
+                            <Card key={peli.id} card={peli} />
+                        ))}
+                    </div>
 
-                {/* LAS TARJETAS REORTADAS Y FILTRADAS */}
-                <div className="container mx-auto grid grid-cols-1 gap-16 md:gap-x-10 md:gap-y-20 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-20 lg:gap-y-28 pb-16">
-                    {pelisPaginadas.map(peli => (
-                        <Card key={peli.id} card={peli} />
-                    ))}
                 </div>
                 {/* ─── 4. RENDERIZADO USANDO TUS PROPIOS COMPONENTES ─── */}
                 {totalPaginas > 1 && (
@@ -116,7 +117,7 @@ const Cartelera = () => {
                                 <DotButton
                                     key={index}
                                     onClick={() => onDotButtonClick(index)}
-                                    className={`transition-all duration-300 rounded-full
+                                    className={`transition-all duration-300 rounded-full cursor-pointer  
                                     ${index === selectedIndex
                                             ? 'w-5 h-5 bg-green' // Estilo activo Y2K
                                             : 'w-5 h-5 bg-black opacity-60 dark:bg-white' // Estilo apagado

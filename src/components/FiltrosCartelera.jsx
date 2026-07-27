@@ -40,9 +40,9 @@ const FiltrosCartelera = ({ tipoSeleccionado, setTipoSeleccionado, totalResultad
 
 
     return (
-        <div>
+        <>
             {/* Cambiamos a un contenedor flex inteligente con transiciones en sus elementos */}
-            <nav className={`flex items-center gap-3 justify-between flex-wrap font-sans md:gap-12 lg:gap-36 ${tipoSeleccionado !== "all" || generoSeleccionado !== "all" || fechaSeleccionada !== "all" ? 'mb-10' : 'mb-16'}`}>
+            <nav className={`flex sticky top-16 lg:top-32 z-50 items-center gap-3 justify-between flex-wrap font-sans md:gap-12 lg:gap-36 ${tipoSeleccionado !== "all" || generoSeleccionado !== "all" || fechaSeleccionada !== "all" ? 'mb-10' : 'mb-16'} md:px-12 lg:px-60`}>
 
                 {/* ─── DESPLEGABLE 1: TIPO ─── */}
                 <Listbox value={tipoSeleccionado} onChange={setTipoSeleccionado}>
@@ -161,11 +161,11 @@ const FiltrosCartelera = ({ tipoSeleccionado, setTipoSeleccionado, totalResultad
             </nav>
 
             {(fechaSeleccionada !== "all" || tipoSeleccionado !== "all" || generoSeleccionado !== 'all') && (
-                <p className="uppercase text-black font-sans mb-17 text-right md:mb-10 lg:my-12">
+                <p className="uppercase text-black font-sans mb-17 text-right md:mb-10 lg:my-12 md:px-12 lg:px-60">
                     <span className="font-bold bg-grey rounded-full px-3.5 py-2 md:py-3 lg:px-4.5 lg:mr-6">{totalResultados}</span> Resultados
                 </p>
             )}
-        </div>
+        </>
     );
 };
 export default FiltrosCartelera;

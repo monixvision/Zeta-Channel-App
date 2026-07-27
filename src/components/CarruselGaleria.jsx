@@ -5,7 +5,7 @@ import { useCarruselIndicadores } from "../data/useCarruselIndicadores.js";
 import { DotButton } from "../components/CarruselIndicadores.jsx";
 
 const CarruselGaleria = ({ imagenesGaleria }) => {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'start', loop: true, slidesToScroll:"auto" })
+    const [emblaRef, emblaApi] = useEmblaCarousel({ align: 'start', loop: true, slidesToScroll: "auto" })
 
     const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi)
 
@@ -44,7 +44,7 @@ const CarruselGaleria = ({ imagenesGaleria }) => {
                         key={index}
                         onClick={() => onDotButtonClick(index)}
                         className="w-4 h-4">
-                        <div className={`w-full h-full rounded-full ${index === selectedIndex ? 'bg-green' : 'bg-black opacity-50'}`}></div>
+                        <div className={`w-full h-full cursor-pointer rounded-full ${index === selectedIndex ? 'bg-green' : 'bg-black opacity-50'}`}></div>
                     </DotButton>
                 ))}
             </div>
