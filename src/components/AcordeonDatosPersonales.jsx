@@ -90,7 +90,7 @@ const AcordeonAgenda = ({ toggleSeccion, seccionActiva, irASiguiente, nombre, se
                         </p>
                     </li>
                     <li>
-                        <Btn to="#" type="button" text="Siguiente" variant={valido ? 'solidgreen' : 'solidblack'} size='xs' font='sans' onClick={() => { if(valido) irASiguiente(4) }} className=" lg:mx-75" />
+                        <Btn to="#" type="button" text="Siguiente" variant={valido ? 'solidgreen' : 'solidgrey'} size='xs' font='sans' onClick={() => { if (valido) irASiguiente(4) }} className=" lg:mx-75" />
                     </li>
                 </ul>
             </div>

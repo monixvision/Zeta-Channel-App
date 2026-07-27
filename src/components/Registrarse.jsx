@@ -70,18 +70,18 @@ const Registrarse = ({ setUserRegistrado, setUserIniciado, email, setEmail }) =>
                 <ul className="flex flex-col gap-2 mt-2 font-sans text-pretty">
                     <li className={`text-sm 
                     ${password.length === 0 && 'text-neutral-600 dark:text-gray-300'} 
-                    ${comprobarLongitud(password) ? 'text-green-500' : (password.length>0 ? 'text-red-alert' : '')}`}> Al menos 8 caracteres
+                    ${comprobarLongitud(password) ? 'text-green-500' : (password.length > 0 ? 'text-red-alert' : '')}`}> Al menos 8 caracteres
                     </li>
 
                     <li className={`text-sm
                     ${password.length === 0 && 'text-neutral-600 dark:text-gray-300'} 
-                    ${comprobarCorreo(password) ? 'text-green-500' : (password.length>0 ? 'text-red-alert' : '')}`}>
+                    ${comprobarCorreo(password) ? 'text-green-500' : (password.length > 0 ? 'text-red-alert' : '')}`}>
                         No puede contener tu correo electrónico
                     </li>
 
                     <li className={`text-sm 
                     ${password.length === 0 && 'text-neutral-600 dark:text-gray-300'} 
-                    ${(comprobarMayuscula(password) && comprobarMinuscula(password) && comprobarNumero(password) && comprobarCaracterEspecial(password)) ? 'text-green-500' : (password.length>0 ? 'text-red-alert' : '')}`}>
+                    ${(comprobarMayuscula(password) && comprobarMinuscula(password) && comprobarNumero(password) && comprobarCaracterEspecial(password)) ? 'text-green-500' : (password.length > 0 ? 'text-red-alert' : '')}`}>
                         Al menos una mayúscula, minúscula, un signo y un número
                     </li>
                 </ul>
@@ -109,11 +109,11 @@ const Registrarse = ({ setUserRegistrado, setUserIniciado, email, setEmail }) =>
                     </p>
                 </div>
                 <div className="lg:mx-30">
-                    <Btn to="#" text="REGÍSTRATE" variant={registroValido ? 'solidgreen' : 'solidblack'} size='xs' font='sans' onClick={() => {
-                        if(registroValido) setUserIniciado(true)
+                    <Btn to="#" text="REGÍSTRATE" variant={registroValido ? 'solidgreen' : 'solidgrey'} size='xs' font='sans' onClick={() => {
+                        if (registroValido) setUserIniciado(true)
                     }} />
                 </div>
-                
+
 
                 <div className="flex flex-col gap-2">
                     <p>¿Ya tienes cuenta?</p>

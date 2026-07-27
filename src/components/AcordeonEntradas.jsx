@@ -92,7 +92,7 @@ const AcordeonEntradas = ({ toggleSeccion, seccionActiva, setInfoEntradaDia, inf
                         <p className="text-xl font-bold">{entradaDia + entradaInfantilDia + entrada3Dias + entradaInfantil3Dias} Entrada{entradaDia + entradaInfantilDia + entrada3Dias + entradaInfantil3Dias !== 1 ? 's' : ''}</p>
                     </div>
                     <p className="text-sm text-neutral-500 text-pretty mt-1 mb-2 md:text-lg">*El coste de la entrada del viernes es a mitad de precio</p>
-                    <Btn to="#" text="Siguiente" variant={precioTotal > 0 ? 'solidgreen' : 'solidblack'} size='xs' font='sans' onClick={() => {if(precioTotal>0)irASiguiente(2)}} className="md:mx-20 md:mt-4 lg:mx-75" />
+                    <Btn to="#" text="Siguiente" variant={precioTotal > 0 ? 'solidgreen' : 'solidgrey'} size='xs' font='sans' onClick={() => { if (precioTotal > 0) irASiguiente(2) }} className="md:mx-20 md:mt-4 lg:mx-75" />
                 </div>
             </div>
         )}

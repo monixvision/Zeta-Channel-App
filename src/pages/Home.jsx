@@ -33,13 +33,13 @@ import { ZonaPixelMovil, ZonaPixelTablet, ZonaPixelPc } from '../components/Pixe
 import Agenda from './Agenda.jsx';
 import SobreNosotros from '../data/sobreNosotros.js';
 
-import galeria7 from '../assets/img/cartelera/high-school-musical/galeria-7.webp';
+import galeria7 from '../assets/img/cartelera/lemonade-mouth/galeria-8.webp';
 import galeria1 from '../assets/img/cartelera/high-school-musical/galeria-1.webp';
-import galeria2 from '../assets/img/cartelera/high-school-musical/galeria-2.webp';
-import galeria3 from '../assets/img/cartelera/high-school-musical/galeria-3.webp';
-import galeria4 from '../assets/img/cartelera/high-school-musical/galeria-4.webp';
-import galeria5 from '../assets/img/cartelera/high-school-musical/galeria-5.webp';
-import galeria6 from '../assets/img/cartelera/high-school-musical/galeria-6.webp';
+import galeria2 from '../assets/img/cartelera/hannah-montana/galeria-5.webp';
+import galeria3 from '../assets/img/cartelera/lizzie-mcguire/galeria-7.webp';
+import galeria4 from '../assets/img/cartelera/radio-rebelde/portada.webp';
+import galeria5 from '../assets/img/cartelera/teen-beach-movie/galeria-6.webp';
+import galeria6 from '../assets/img/cartelera/dulce-hotel-zack-y-cody/portada.webp';
 
 
 const Home = ({ popupHome, setpopupHome, popupQuepasa, setpopupQuepasa }) => {
@@ -60,7 +60,7 @@ const Home = ({ popupHome, setpopupHome, popupQuepasa, setpopupQuepasa }) => {
                             festival
                         </div>
                     </Link>)}
-                    {!popupQuepasa && (<Link className={`absolute top-20 right-8 mx-auto pt-6 cursor-pointer flex flex-col pr-10 lg:top-30 lg:right-60`} to="/Tickets">
+                    {!popupQuepasa && (<Link className={`absolute top-20 right-2 mx-auto pt-6 cursor-pointer flex flex-col pr-10 lg:top-30 lg:right-60`} to="/Tickets">
                         <div className="relative w-30 h-20 mx-auto">
                             <img src={pegatinaTickets} alt="Pegatina user" className="w-full h-full mx-auto" />
                             <img src={IconoTickets} alt="Icono tickets" className="absolute -bottom-2 right-3 w-14 h-14" />

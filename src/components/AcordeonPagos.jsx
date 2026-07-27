@@ -145,11 +145,11 @@ const AcordeonPagos = ({ toggleSeccion, seccionActiva, setSeccionActiva, selecci
                                 </button></li>
                             </ul>
                             <div className="md:hidden">
-                                <Btn to="#" text="Comprar" variant={todoCorrecto ? 'solidgreen' : 'solidblack'} size='xs' font='sans' className="w-full" onClick={() => {if(todoCorrecto) setHasPagado(true)}} />
+                                <Btn to="#" text="Comprar" variant={todoCorrecto ? 'solidgreen' : 'solidgrey'} size='xs' font='sans' className="w-full" onClick={() => { if (todoCorrecto) setHasPagado(true) }} />
 
                             </div>
                             <div className=" hidden md:block md:w-full lg:w-1/2">
-                                <Btn to="#" text="Comprar" variant={todoCorrecto ? 'solidgreen' : 'solidblack'} size='lg' font='sans' className="w-full" onClick={() => {if(todoCorrecto) setHasPagado(true)}} />
+                                <Btn to="#" text="Comprar" variant={todoCorrecto ? 'solidgreen' : 'solidgrey'} size='lg' font='sans' className="w-full" onClick={() => { if (todoCorrecto) setHasPagado(true) }} />
 
                             </div>
 

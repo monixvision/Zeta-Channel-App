@@ -16,7 +16,7 @@ const Btn = ({
     const estadoStyles = {
         disponible: "outline-solid text-white",
         ultimasUnidades: "outline-dashed text-white",
-        noDisponible: "bg-neutral-400 text-neutral-700",
+        noDisponible: "bg-neutral-400 text-neutral-700"
     }
 
     const fontStyle = {
@@ -44,6 +44,8 @@ const Btn = ({
 
         solidpink: "bg-pink text-black hover:bg-pink-hover",
         outlinepink: "ring-pink  text-black hover:ring-pink-hover",
+
+        solidgrey: "bg-neutral-400 text-neutral-700"
     };
 
     const btnClass = `${baseStyles} ${fontStyle[font]} ${sizeStyle[size]} ${variantStyles[variant]} ${estado ? estadoStyles[estado] : ""}`;

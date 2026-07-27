@@ -16,7 +16,7 @@ const InicioSesion = ({ setUserIniciado, setUserRegistrado, email, setEmail }) =
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     }
-    const loginValido = emailValido(email) && password.length>0;
+    const loginValido = emailValido(email) && password.length > 0;
     return (
         <div className="relative">
             <div className="relative z-10 flex flex-col gap-6 md:mx-20 md:gap-10 lg:mx-82">
@@ -44,10 +44,10 @@ const InicioSesion = ({ setUserIniciado, setUserRegistrado, email, setEmail }) =
                 />
                 <a href="#" className="text-black dark:text-white -mt-3 font-semibold font-sans hover:underline">¿Olvidaste tu contraseña?</a>
                 <div className="lg:mx-30">
-                    <Btn to="#" text="INICIAR SESIÓN" variant={loginValido ? 'solidgreen' : 'solidblack'} size='xs' font='sans' onClick={() => {
-                        if(loginValido)
-                        setUserIniciado(true)
-                        }} />
+                    <Btn to="#" text="INICIAR SESIÓN" variant={loginValido ? 'solidgreen' : 'solidgrey'} size='xs' font='sans' onClick={() => {
+                        if (loginValido)
+                            setUserIniciado(true)
+                    }} />
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-300">
                     Al continuar, aceptas las
